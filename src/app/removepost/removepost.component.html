@@ -1,0 +1,29 @@
+<div class="card ">
+
+    <div class="card-header bg-danger text-light">
+        <span class="card-title h2"><i class="fa fa-trash" aria-hidden="true"></i>Post Remove Confirmation!</span>
+    </div>
+    <div class="card-body" *ngIf="addpost">
+        <table class="table">
+            <tr>
+                <td>Name</td>
+                <td>{{addpost.name}}</td>
+                    </tr>
+                    <tr>
+                            <td class="col-md-1">Description</td>
+                            <td>{{addpost.desc}}</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="col-md-1">Product Price</td>
+                            <td>{{addpost.price}}</td>
+                        </tr>
+            
+        </table>
+        
+        <button class="btn btn-success" (click)="remove()"> <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+             Confirm</button>
+        &nbsp;
+        <a href="#" class="btn btn-danger" ><i class="fa fa-times" aria-hidden="true"></i> Cancel</a>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+<h2>Update Product</h2>
+<br>
+
+<form action="" #pform="ngForm">
+  <input class="form-control" type="hidden" name="productid" ngModel>               
+        
+
+    <div class="errorBlock" *ngIf="error">
+            {{error}}
+    </div>
+
+           <div class="containter">
+               <div class="row">
+                   <div class="col-md-6">
+                   
+                        Product Name
+                     
+
+                   </div>
+
+               </div>
+
+           </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                        
+                
+                            <input class="form-control" type="text" name="name" #name="ngModel" placeholder="Name"  ngModel>               
+                        
+                    </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        
+    
+            <div class="container"> 
+                <div class="row">
+                    <div class="col-md-6">
+                        
+                            Description
+                    
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        
+                           <textarea class="form-control"  name="desc" placeholder="Descrption" ngModel></textarea>
+                
+                    </div>
+                </div>
+           </div>  
+           
+         
+           <div class="container"> 
+            <div class="row">
+                <div class="col-md-6">
+                    
+                        Price
+                
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    
+                    <input class="form-control" type="text" name="price" #price="ngModel" placeholder="Price"  ngModel>               
+            
+                </div>
+            </div>
+       </div>  
+       
+     
+    <br> 
+    <button class="btn btn-warning" (click)="update()" ><i class="fa fa-edit" aria-hidden="true"></i> Update Product</button>
+    &nbsp;
+    <a href="#" class="btn btn-danger" routerLink="/allpost" > <i class="fa fa-times" aria-hidden="true"></i>
+         Cancel</a>
+ </form>
+
+ 

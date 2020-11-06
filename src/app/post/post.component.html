@@ -1,0 +1,48 @@
+<h2>New Post</h2>
+
+<div class="row">
+
+    <div class="col-md-6">
+        <form [formGroup]="regForm" (submit)="onSubmit()">
+           
+           
+            <label for="">Product Id</label>
+            
+            <input type="text" class="form-control" formControlName="productid" > 
+            
+           
+            <div class="errorBlock" *ngIf="error">
+                {{error}}
+        </div>
+        <div class="form-group">
+            <label for="">Product Name</label>
+            <input type="text" class="form-control" formControlName="name">
+        </div>
+        
+            <div class="form-group">
+                <label for="">Description</label>
+                <input type="text" class="form-control" formControlName="desc">
+            </div>
+            <div class="form-group">
+                <label for="">Price</label>
+                <input type="text" class="form-control" formControlName="price">
+            </div>
+            <div class="form-group">
+                <label for="">Photo</label>
+                <input type="file" #image class="form-control" >
+            </div>
+           
+           
+            <!-- <div class="form-group">
+                <button>Submit</button>
+            </div> -->
+            <div>
+                <button  class="btn btn-success"> Add Post</button>
+    <!-- <button class="btn btn-warning" (click)="update()" [hidden]="!editMode"> Update post</button> -->
+    &nbsp;
+    <a href="#" class="btn btn-danger" routerLink="/allpost" > <i class="fa fa-times" aria-hidden="true"></i>
+         Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+<h2>Registration</h2>
+<div class="row">
+
+    <div class="col-md-6">
+        <form [formGroup]="regForm" (submit)="onSubmit()">
+            <div class="form-group">
+                <label for="">Userid</label>
+                <input type="text" class="form-control" formControlName="userid">
+                <div *ngIf="regForm.controls.userid.touched && regForm.controls.userid.errors" class="text-danger">
+                    User Id is Required
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" class="form-control" formControlName="name">
+                <div *ngIf="regForm.controls.name.touched && regForm.controls.name.errors" class="text-danger">
+                    Name is Required
+                </div>
+                <div *ngIf="regForm.controls.name.errors.pattern " class="text-danger">
+                    Only Alphabets
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Contact</label>
+                <input type="text" class="form-control" formControlName="contact">
+                <div *ngIf="regForm.controls.contact.errors.pattern" class="text-danger">Enter only number.</div>
+                <div *ngIf="regForm.controls.contact.touched && regForm.controls.contact.errors" class="text-danger">
+                    Contact is Required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" formControlName="email">
+                <div *ngIf="regForm.controls.email.errors.pattern" class="text-danger">Enter valid email</div>
+                <div *ngIf="regForm.controls.email.touched && regForm.controls.email.errors" class="text-danger">
+                    Email is Required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="text" class="form-control" formControlName="password">
+                <div *ngIf="regForm.controls.password.errors.pattern" class="text-danger">Enter Strong Password</div>
+                <div *ngIf="regForm.controls.password.touched && regForm.controls.password.errors" class="text-danger">
+                    Password is Required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">City</label>
+                <input type="text" class="form-control" formControlName="city">
+                <div *ngIf="regForm.controls.city.touched && regForm.controls.city.errors" class="text-danger">
+                    City is Required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Age</label>
+                <input type="text" class="form-control" formControlName="age">
+                <div *ngIf="regForm.controls.age.touched && regForm.controls.age.errors" class="text-danger">
+                    Age is Required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Photo</label>
+                <input type="file" #image class="form-control" >
+                <div *ngIf="regForm.controls.photo.touched && regForm.controls.photo.errors" class="text-danger">
+                    Photo is Required
+                </div>
+            </div>
+            <div class="form-group">
+                <button>Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
